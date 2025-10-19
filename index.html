@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container py-5 my-5">
+        <div class="row">
+            <div class="form-group">
+                <label for="protuctName"> protuct Name</label>
+                <input type="text" class="form-control mb-3" name="" id="protuctName" placeholder="">
+                <label for="protuctPrice"> protuct Price</label>
+                <input type="number" class="form-control mb-3" name="" id="protuctPrice" placeholder="">
+                <label for="protuctCategory"> protuct Category</label>
+                <input type="text" class="form-control mb-3" name="" id="protuctCategory" placeholder="">
+                <div class="mb-3">
+                    <label for="protuctDecribion"> protuct Decribion</label>
+                    <textarea class="form-control" name="" id="protuctDecribion" rows="3"></textarea>
+                </div>
+                
+                <button id="addProtucts" onclick="addProtuct();" class="btn d-block w-100 btn-primary">Add Protuct</button>
+                <button id="updateProtucts" onclick="saveUpdatedProtuct();" class="btn w-100 btn-warning mt-2 d-none">Update
+                    Product</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive  w-75 m-auto text-center">
+        <input type="text" oninput="searchProtuct(this.value)" class="form-control w-75 m-auto my-5 "placeholder="Text For Search" >
+        <table class="table table-light mb-5 ">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Decribion</th>
+                    <th scope="col">update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
